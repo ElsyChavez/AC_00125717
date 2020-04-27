@@ -67,7 +67,17 @@ n:              cmp bx, 21Fh
         mov [221h], ax
         mov bx, 222h
 
-
+fiboF:  mov ax, 0000h
+        mov [bx], ax
+        sub bx, 2h 
+        mov al, [bx]
+        add bx, 1h 
+        add ax, [bx]
+        add bx, 1h 
+        mov [bx], ax
+        add bx, 1h
+        cmp bx, 22Fh
+        jb fiboF
         
         ;linea final
         int 20h

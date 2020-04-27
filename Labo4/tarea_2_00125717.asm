@@ -36,6 +36,29 @@
         mov [209h], cl
         mov cl, "O"
         mov [20Ah], cl
+
+;Ejercicio 2
+
+        mov ax, 0000h
+        mov al, 2d
+        mov bx, 210h 
+        mov cx, 2d
+
+esti:   mul cx
+        mov [bx], ax
+        cmp ah, 00h 
+        ja segundo
+        je primero
+
+segundo:        add bx, 2h 
+                jmp n
+
+primero:        add bx, 1h 
+
+n:              cmp bx, 21Fh
+                jb esti
+
+
         
         ;linea final
         int 20h

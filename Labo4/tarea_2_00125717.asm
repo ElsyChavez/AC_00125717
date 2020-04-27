@@ -58,6 +58,15 @@ primero:        add bx, 1h
 n:              cmp bx, 21Fh
                 jb esti
 
+;Ejercicio 3
+
+        mov ax, 0000h
+        mov ax, 0d
+        mov [220h], ax
+        mov ax, 1d
+        mov [221h], ax
+        mov bx, 222h
+
 
         
         ;linea final
